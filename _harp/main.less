@@ -1,19 +1,72 @@
-body{
-  font-family: "Helvetica";
-  text-align: center;
-  padding: 50px 20px 0;
-  background: #f4f4f7;
-  color: #444;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,400italic,700italic);
+
+/*
+Colors
+*/
+@green: #1de9b6; //#6DA;
+@bg: #f8f8ff;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  background: @bg;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica', sans-serif;
+  letter-spacing: 1px;
+  padding: 7rem 2rem 0;
+  color: #343234;
   margin: 0;
 }
 
-h1{
-  font-size: 65px;
-  line-height: 1.2em;
-  border-bottom: #CCC solid 1px;
-  padding: 20px 0;
+.container {
+  margin: 2rem auto;
+  max-width: 70rem;
+
+  @media only screen and (min-width: 98rem) {
+    max-width: 70rem;
+  }
+
+  @media only screen and (max-width: 76rem) {
+    max-width: 52rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    max-width: 70%;
+  }
 }
 
-h3{
-  font-weight: 300;
+h1, p {
+  line-height: 1.2;
+  padding: 1.5rem 0 0.75rem;
+  font-size: 4rem;
+
+  @media only screen and (min-width: 98rem) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: 76rem) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    font-size: 2.5rem;
+  }
+
+}
+
+a {
+  color: @green;
+  text-decoration: none;
+  transition: color .3s, background-color .3s ease;
+
+  &:hover {
+    background-color: @green;
+    color: #343234;
+  }
 }
